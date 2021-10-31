@@ -1,0 +1,40 @@
+<%- include('partials/_header'); -%>
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('img/post-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1><%= post.title %></h1>
+          <span class="meta">Posted by
+            <a href="#"><%= post.author %></a>
+            on <%= post.dateCreated.toDateString() %></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <p><%= post.content %></p>
+
+        <div class="text-center">
+          <a href="/posts/edit/<%= post._id %>" class="btn btn-primary p-0 mb-4 tm-btn-animate tm-btn-download tm-icon-download"><span>Update Details</span></a>
+        </div>
+        <div class="text-center">
+          <a href="/posts/delete/<%= post._id %>?_method=DELETE" class="btn btn-danger p-0 mb-4 tm-btn-animate tm-btn-download tm-icon-download" onclick="return confirm('Are your sure?')"><span>Delete</span></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</article>
+
+<%- include('partials/_footer'); -%>
