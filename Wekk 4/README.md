@@ -8,7 +8,7 @@ mySeriesTracker.printSeriesReport();
 ```
 ### Output:
 
-<img src="1.png">
+<img src="screenshots/1.png">
 
 ***
 ## Case 2
@@ -19,7 +19,7 @@ mySeriesTracker.printSeriesReport();
 ```
 ### Output:
 
-<img src="1.png">
+<img src="screenshots/1.png">
 
 ***
 ## Case 3
@@ -37,6 +37,6 @@ mySeriesTracker.printSeriesReport();
 
 ### Output:
 
-<img src="3.png">
+<img src="screenshots/3.png">
 
 ***
