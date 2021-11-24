@@ -19,4 +19,4 @@ $ npm start
 
 - Go to `localhost:3000` on your browser.
 
-<a href="/public/1.png"></a>
+![img](./public/1.png)
