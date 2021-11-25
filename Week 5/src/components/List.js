@@ -4,16 +4,18 @@ import { nanoid } from "nanoid";
 export default function List({ list, setList, filter }){
 
   // Mark an item as done
-  function checkItem(index) {
+  function checkItem(item) {
     const newList = [...list];
-    newList[index].done = !newList[index].done;
+    const indexToCheck = newList.indexOf(item);
+    newList[indexToCheck].done = !newList[indexToCheck].done;
     setList(newList);
   }
 
   // Remove an item from the todo list
-  function removeItem(index) {
+  function removeItem(item) {
     const newList = [...list];
-    newList.splice(index, 1);
+    const indexToDelete = newList.indexOf(item);
+    newList.splice(indexToDelete, 1);
     setList(newList);
   }
 
@@ -32,9 +34,9 @@ export default function List({ list, setList, filter }){
             return (
               <li key={nanoid()} className={item.done && "completed"}>
                 <div className="view">
-                  <input onClick={() => checkItem(index)} className="toggle" type="checkbox" checked={item.done}/>
+                  <input onClick={() => checkItem(item)} className="toggle" type="checkbox" checked={item.done}/>
                   <label>{item.task}</label>
-                  <button onClick={() => removeItem(index)} className="destroy"></button>
+                  <button onClick={() => removeItem(item)} className="destroy"></button>
                 </div>
               </li>
             )
