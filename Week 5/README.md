@@ -19,4 +19,4 @@ $ npm start
 
 - Go to `localhost:3000` on your browser.
 
-!()[ "./public/1.png" ]
+![img](./public/1.png)
