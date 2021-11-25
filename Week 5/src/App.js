@@ -16,7 +16,7 @@ import Footer from './components/Footer';
 export default function App() {
   // States
   // Todo list items has a task and status (done or not)
-  const [list, setList] = useState([{task: "do something", done: false}, {task: "do something else", done: false}]);
+  const [list, setList] = useState([{task: "do something", done: false, isEditing: false}, {task: "do something else", done: false, isEditing: false}]);
   // Filter state to show only done or not done tasks
   const [filter, setFilter] = useState(undefined);
 

@@ -6,7 +6,8 @@ export default function Form({ list, setList }) {
     if (e.target.children[0].value !== '') {
     const newTodo = {
       task: e.target.children[0].value,
-      done: false
+      done: false,
+      isEditing: false
     };
     setList([...list, newTodo]);
     e.target.reset();
