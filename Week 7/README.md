@@ -8,7 +8,7 @@
 def random_number_generator(n, l):
   """Generates 'n' random numbers with 'l' digits, with no duplicates."""
 
-  if n < (10**l):
+  if n < (10**l - 10**(l-1)):
     numbers = []
     while len(numbers) < n:
       number = randrange((10 ** (l - 1)), (10 ** (l)))
