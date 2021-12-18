@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     'django_extensions',
     'rest_framework',
+    'rest_framework_simplejwt',   
+    'drf_yasg',
 
     'main',
 ]
@@ -74,6 +76,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'patikagram.wsgi.application'
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
